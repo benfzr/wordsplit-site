@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["XKS94Z3R6W.BenCurry.WordSplit"],
+        "components": [
+          { "/": "/c*" }
+        ]
+      }
+    ]
+  }
+}

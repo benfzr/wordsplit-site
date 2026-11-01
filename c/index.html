@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WordSplit Challenge!</title>
+<style>
+  body { margin:0; font-family: ui-rounded, -apple-system, "Segoe UI", sans-serif;
+         background:#fffcf7; color:#2b3d4f; text-align:center;
+         background-image: repeating-linear-gradient(#fffcf7 0 31px, #d7e4f3 31px 32px); }
+  main { max-width:520px; margin:0 auto; padding:56px 24px; }
+  h1 { font-size:2rem; }
+  .bolt { font-size:3rem; }
+  .card { background:#ffffffd9; border-radius:16px; padding:20px; margin-top:20px; }
+  a.button { display:inline-block; color:#fff; text-decoration:none; font-weight:700;
+             padding:14px 26px; border-radius:999px; margin:8px 4px; }
+  .open { background:#35a05f; }
+  .get { background:#3378ed; }
+  .hint { font-size:.9rem; opacity:.7; margin-top:14px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="bolt">⚡️</div>
+  <h1>You've been challenged to WordSplit!</h1>
+  <div class="card">
+    <p>Same words, same clock — may the best speller win.
+    The words stay secret until you play.</p>
+    <a class="button open" id="open" href="#">I have WordSplit — Open it!</a>
+    <a class="button get" href="https://testflight.apple.com/join/pEQv4pWU">Get WordSplit first</a>
+    <p class="hint">If the open button doesn't work, copy this page's address
+    and paste it into the Challenge screen inside WordSplit.</p>
+  </div>
+</main>
+<script>
+  // Bridge the challenge code into the app via its custom link type.
+  const code = new URLSearchParams(location.search).get("c");
+  if (code) {
+    document.getElementById("open").href =
+      "wordsplit://challenge?c=" + encodeURIComponent(code);
+  }
+</script>
+</body>
+</html>
